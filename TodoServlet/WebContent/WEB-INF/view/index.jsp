@@ -7,9 +7,11 @@
 <title>Hello, World!</title>
 </head>
 <body>
-	foo: <%= request.getAttribute("foo") %> <br/>
-	key01: <%= request.getAttribute("key01") %> <br/>
-	foo: ${foo} <br />
-	key01: ${key01} <br/>
+
+
+	<form method="post" action="./HelloServlet">
+		何か入力して: <input type="text" name="hoge">
+		<button type="submit">送信</button>
+	</form>
 </body>
 </html>
