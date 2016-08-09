@@ -9,5 +9,7 @@
 <body>
 	foo: <%= request.getAttribute("foo") %> <br/>
 	key01: <%= request.getAttribute("key01") %> <br/>
+	foo: ${foo} <br />
+	key01: ${key01} <br/>
 </body>
 </html>
