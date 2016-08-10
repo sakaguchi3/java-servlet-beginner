@@ -7,6 +7,7 @@
 <title>Hello, World!</title>
 </head>
 <body>
-	<%= request.getAttribute("foo") %>
+	foo: <%= request.getAttribute("foo") %> <br/>
+	key01: <%= request.getAttribute("key01") %> <br/>
 </body>
 </html>

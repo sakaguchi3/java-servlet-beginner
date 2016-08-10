@@ -41,6 +41,7 @@ public class HelloServlet extends HttpServlet {
 
 		// JSPに適当な文字列を渡す
 		request.setAttribute("foo", "bar");
+		request.setAttribute("key01", "value01");
 
 		// JSPにforward
 		String view = "/WEB-INF/view/index.jsp";
