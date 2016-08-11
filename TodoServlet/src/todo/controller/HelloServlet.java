@@ -32,7 +32,6 @@ public class HelloServlet extends HttpServlet {
 		System.out.println("aaaaaaaaaaaaaaaaaaaaasaaaaaa:" + str);
 	}
 
-
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
@@ -40,14 +39,14 @@ public class HelloServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		debug("get");
+		// JSPに適当な文字列を渡す
+		request.setAttribute("foo", "bar");
 
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
+		// JSPにforward
+		String view = "/WEB-INF/view/index.jsp";
+		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 
-		 String view = "/WEB-INF/view/index.jsp";
-		 RequestDispatcher dispatcher = request.getRequestDispatcher(view);
-
-		 dispatcher.forward(request, response);
+		dispatcher.forward(request, response);
 	}
 
 	/**
